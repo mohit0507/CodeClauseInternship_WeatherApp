@@ -1,0 +1,254 @@
+.navbar {
+    background-color: #1E202B !important;
+}
+
+
+
+header {
+    background-color: #1E202b;
+    background-image: url('../images/sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+#myData {
+    margin-top: 200px; 
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 10px;
+}
+.wind-status span img {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  .wind-status span{
+    margin-top: 1rem;
+  }
+
+.btn:hover {
+    background: #009AD8;
+    color: white;
+}
+
+.search-bar input {
+    background-color: #2f323b;
+    color:white;
+    padding-block: .7rem;
+    padding-right: 60px;
+    border: none;
+}
+
+.search-bar input::placeholder {
+    color: #757575;
+}
+
+.form-control:focus {
+    background-color: #1E202b;
+    color: white;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.input-group>.form-control:focus {
+    z-index: 0;
+}
+
+
+
+.search-bar button {
+    background: #009AD8;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0 25px 25px 0;
+}
+
+footer .input-group {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+
+
+
+footer{
+    background-color: #262936;
+    color: #fff;
+    padding: 20px 0;
+}
+
+@media (max-width: 776px) {
+    .navbar .navbar-toggler {
+        margin-top: 2rem;
+    }
+
+    header {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .input-group {
+        margin-top: 20rem; /* Adjusted margin-top */
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .card-container {
+        margin-top: 20rem; /* Adjusted margin-top */
+        padding-inline: 1rem;
+    }
+
+    footer .input-group {
+        margin-top: 2rem; /* Adjusted margin-top */
+        width: 100%;
+        padding: 0 1rem;
+    }
+footer .container{
+    margin-top: 20rem;
+}
+    footer p {
+        padding: 1rem;
+    }
+}
+.card-header{
+    background-color: #2D303D;
+    color: white;
+
+
+}
+.card-body{
+    background-color: #323544;
+    color:white;
+;
+}
+
+.card{
+    border: none;
+}
+.wind-status span img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Umbrella Animation */
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.umbrella-icon {
+    animation: swing 2s ease-in-out infinite;
+}
+
+/* Wind Animation */
+@keyframes windMove {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+.wind-icon {
+    animation: windMove 1.5s ease-in-out infinite;
+}
+
+/* Compass Animation */
+/* Compass Animation: Rotate 90 degrees to the right and back to the top */
+@keyframes instantRotateCompass {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-90deg); } /* Rotate to the right */
+    100% { transform: rotate(0deg); } /* Return to the top */
+}
+
+.compass-icon {
+    animation: instantRotateCompass 1.5s steps(2, jump-none) infinite;
+}
+
+
+
+/* Card Styling */
+.card {
+    background-color: transparent; /* Transparent card background */
+    color: white;
+    border-radius: 15px; /* Rounded corners */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    font-family: 'Roboto', sans-serif; /* Updated font */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow enhancement on hover */
+}
+
+.card-header {
+    background-color: rgba(45, 48, 61, 0.9); /* Transparent header */
+    color: white;
+    border-radius: 15px 15px 0 0; /* Smooth corners */
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.card-body {
+    background-color: rgba(50, 53, 68, 0.8); /* Consistent with card background */
+    color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Icon Styling */
+.card .icon {
+    font-size: 2rem;
+    color: #009AD8;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card .icon:hover {
+    color: #00D4FF;
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+/* Font Smoothing */
+body, .card, .card-header, .card-body, .navbar, .footer {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive Adjustment */
+@media (max-width: 776px) {
+    .card {
+        margin: 20px auto; /* Centering cards on mobile */
+        width: 90%;
+    }
+}
+
+

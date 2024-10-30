@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container py-4">
+            <div class="logo-title d-flex align-items-center justify-content-center text-white">
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo"></a>
+                <div class="title">
+                    <h1 class="fs-6">Weather App</h1>
+                    
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+        </div>
+    </nav>
+
+    <header class="d-flex align-items-center" style="height: calc(100vh - 100px);">
+        <div class="container py-5">
+            <div class="input-group w-50 ms-auto mx-auto search-bar position-relative">
+                <input type="search" id="findLocation" class="form-control rounded-pill" placeholder="Enter your location" aria-label="Search location" aria-describedby="button-addon2">
+                <button class="btn btn-primary rounded-pill px-3 position-absolute end-0 top-0 bottom-0" type="button" id="button-addon2">Find</button>
+            </div>
+            <div class="card-content px-5">
+                <div id="myData" class="row justify-content-center mt-5">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content  flex-sm-column flex-lg-row flex-md-column">
+                <div class="input-group text-center  w-50 w-lg-5 search-bar position-relative">
+     
+                </div>
+              
+            </div>
+           
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>
